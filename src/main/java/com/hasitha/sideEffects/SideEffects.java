@@ -1,4 +1,4 @@
-package com.hasitha;
+package com.hasitha.sideEffects;
 
 /**
  * SideEffects is Created by Hasithakn on 11/5/2019
@@ -30,7 +30,7 @@ class Session {
 //with side effects
 class SessionService1 {
 
-    public Session login(User user, String password) {
+    public Session isLogin(User user, String password) {
         if (user.getSession() != null) {
             return user.getSession();
         } else if (user.passwordMatched(password)) {
