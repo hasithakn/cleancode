@@ -1,20 +1,19 @@
-package com.hasitha.naming.refactered;
+package com.hasitha;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class ProfileUpdateCountHandler {
-
+public class ProfileUpdateFalcon {
 
     private AtomicInteger profileUpdateCount = new AtomicInteger(0);
 
-    private static ProfileUpdateCountHandler instance = null;
+    private static ProfileUpdateFalcon instance = null;
 
-    private ProfileUpdateCountHandler() {
+    private ProfileUpdateFalcon() {
     }
 
-    public static synchronized ProfileUpdateCountHandler getInstance() {
+    public static synchronized ProfileUpdateFalcon getInstance() {
         if (instance == null) {
-            instance = new ProfileUpdateCountHandler();
+            instance = new ProfileUpdateFalcon();
         }
         return instance;
     }
@@ -27,7 +26,7 @@ public class ProfileUpdateCountHandler {
         return instance.profileUpdateCount.get();
     }
 
-    public void resetCount() {
+    public void reset() {
         instance.profileUpdateCount.set(0);
     }
 }

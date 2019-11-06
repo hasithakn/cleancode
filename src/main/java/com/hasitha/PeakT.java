@@ -1,12 +1,12 @@
-package com.hasitha.naming.refactered;
+package com.hasitha;
 
 import java.time.LocalDateTime;
 
-public class PeakTps {
+public class PeakT {
     private final int peakTps;
     private final LocalDateTime peakTpsTime;
 
-    public PeakTps(int peakTps, LocalDateTime peakTpsTime) {
+    public PeakT(int peakTps, LocalDateTime peakTpsTime) {
         this.peakTps = peakTps;
         this.peakTpsTime = peakTpsTime;
     }

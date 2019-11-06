@@ -1,36 +1,10 @@
-package com.hasitha.duplication;
+package com.hasitha;
 
 import java.text.SimpleDateFormat;
-import java.time.Instant;
 import java.util.Date;
 import java.util.TimeZone;
 
-/**
- * Duplication is Created by Hasithakn on 11/5/2019
- */
-
-
-public class Duplication {
-
-    public static void main(String[] args) {
-        Date currentDate = Date.from(Instant.now());
-
-        String dateString = DateUtils.dateToISO(currentDate);
-        String dateStringWithOutUTC = DateUtils.dateToISOWithOutUTC(currentDate);
-        System.out.println("Date : " + dateString);
-        System.out.println("Date without UTC: " + dateStringWithOutUTC);
-
-
-        dateString = new DateUtilsRefactored().dateToISO(currentDate, TimeZone.getTimeZone("UTC"));
-        dateStringWithOutUTC = new DateUtilsRefactored().dateToISO(currentDate, TimeZone.getDefault());
-
-        System.out.println("Date : " + dateString);
-        System.out.println("Date without UTC: " + dateStringWithOutUTC);
-    }
-}
-
-
-class DateUtils {
+public class DateTypeConverter {
 
     public static String dateToISO(Date date) {
         try {
@@ -39,7 +13,7 @@ class DateUtils {
             sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
             String isoTS = sdf.format(date);
             return isoTS;
-        } catch (Exception e) {
+        } catch (IllegalArgumentException e) {
             if (date != null) {
                 return date.toString();
             } else {
@@ -55,7 +29,7 @@ class DateUtils {
             SimpleDateFormat sdf = new SimpleDateFormat(pattern);
             String isoTS = sdf.format(date);
             return isoTS;
-        } catch (Exception e) {
+        } catch (IllegalArgumentException e) {
             if (date != null) {
                 return date.toString();
             } else {
@@ -68,9 +42,16 @@ class DateUtils {
 
 
 
-class DateUtilsRefactored {
 
-    final String DATE_PATTERN = "yyyy-MM-dd'T'HH:mm:ss'Z'";
+
+
+
+
+
+
+
+/*
+*   final String DATE_PATTERN = "yyyy-MM-dd'T'HH:mm:ss'Z'";
     final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat(DATE_PATTERN);
 
     public String dateToISO(Date date, TimeZone timeZone) {
@@ -79,4 +60,6 @@ class DateUtilsRefactored {
         return dateString;
 
     }
-}
+
+
+    */

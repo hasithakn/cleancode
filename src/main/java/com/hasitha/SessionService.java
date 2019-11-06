@@ -1,34 +1,6 @@
-package com.hasitha.sideEffects;
+package com.hasitha;
 
-/**
- * SideEffects is Created by Hasithakn on 11/5/2019
- */
-public class SideEffects {
-
-}
-
-class User {
-
-    private Session session;
-
-    public Session getSession() {
-        return session;
-    }
-
-    public void setSession(Session session) {
-        this.session = session;
-    }
-
-    public boolean passwordMatched(String password) {
-        return false;
-    }
-}
-
-class Session {
-}
-
-//with side effects
-class SessionService1 {
+public class SessionService {
 
     public Session isLogin(User user, String password) {
         if (user.getSession() != null) {
@@ -43,9 +15,25 @@ class SessionService1 {
 }
 
 
-//after refactor with CQRS
-class SessionService2 {
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+*
     public boolean isLogin(User user) {
         return user.getSession() != null;
     }
@@ -55,4 +43,5 @@ class SessionService2 {
             user.setSession(new Session());
         }
     }
-}
+
+    */
