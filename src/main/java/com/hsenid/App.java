@@ -1,4 +1,4 @@
-package com.hasitha;
+package com.hsenid;
 
 import java.util.logging.Logger;
 
@@ -15,8 +15,6 @@ public class App {
 
         PeakT peakT = tpsFalcon.fetchPeakTps();
         int count = profileUpdateFalcon.getCount();
-
-
 
     }
 }
