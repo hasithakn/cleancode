@@ -1,4 +1,4 @@
-package com.hsenid;
+package com.hsenid.v2;
 
 public class User {
 

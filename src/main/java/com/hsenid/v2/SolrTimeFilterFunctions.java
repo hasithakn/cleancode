@@ -1,4 +1,4 @@
-package com.hsenid;
+package com.hsenid.v2;
 
 public class SolrTimeFilterFunctions {
     public static String getFilteredDate(String timeFilter1, String timeFilter2, String timeTemp) {
