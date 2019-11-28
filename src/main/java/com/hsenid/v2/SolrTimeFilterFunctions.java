@@ -1,13 +1,16 @@
 package com.hsenid.v2;
 
 public class SolrTimeFilterFunctions {
-    public static String getFilteredDate(String timeFilter1, String timeFilter2, String timeTemp) {
+    public static String getFilteredDate(String timeFilter1, String timeFilter2, String time) {
         StringBuffer temp = new StringBuffer();
         temp.append("datetime: [");
-        temp.append(timeTemp);
+        temp.append(time);
         temp.append(timeFilter1);
         temp.append(" TO ");
-        temp.append(timeTemp + timeFilter2 + " ]");
+        temp.append(time + timeFilter2 + " ]");
         return temp.toString();
     }
 }
+
+// datetime: [ '2019-11-28 00:00:00 -24HOURS' TO '2019-11-28 00:00:00 +24HOURS' ]
+

@@ -10,7 +10,7 @@ public class TPSFalcon {
     private int m = 10;
 
     private AtomicInteger t = new AtomicInteger(0);
-    private PeakT peakTps = new PeakT(0, LocalDateTime.now());
+    private PeakTPS peakTps = new PeakTPS(0, LocalDateTime.now());
 
     private static TPSFalcon instance = null;
 
@@ -34,16 +34,16 @@ public class TPSFalcon {
 
     private synchronized void doIt(int tps) {
         if (tps > instance.peakTps.getPeakTps()) {
-            instance.peakTps = new PeakT(tps, LocalDateTime.now());
+            instance.peakTps = new PeakTPS(tps, LocalDateTime.now());
         }
     }
 
-    public PeakT fetchPeakTps() {
+    public PeakTPS fetchPeakTps() {
         return instance.peakTps;
     }
 
     public void killItBro() {
-        instance.peakTps = new PeakT(0, LocalDateTime.now());
+        instance.peakTps = new PeakTPS(0, LocalDateTime.now());
     }
 
     public void setMaxTps(int maxTps) {

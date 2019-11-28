@@ -13,7 +13,8 @@ public class App {
         ProfileUpdateFalcon profileUpdateFalcon = ProfileUpdateFalcon.getInstance();
 
 
-        PeakT peakT = tpsFalcon.fetchPeakTps();
+
+        PeakTPS peakT = tpsFalcon.fetchPeakTps();
         int count = profileUpdateFalcon.getCount();
 
 

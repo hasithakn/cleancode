@@ -2,11 +2,11 @@ package com.hsenid.v2;
 
 import java.time.LocalDateTime;
 
-public class PeakT {
+public class PeakTPS {
     private final int peakTps;
     private final LocalDateTime peakTpsTime;
 
-    public PeakT(int peakTps, LocalDateTime peakTpsTime) {
+    public PeakTPS(int peakTps, LocalDateTime peakTpsTime) {
         this.peakTps = peakTps;
         this.peakTpsTime = peakTpsTime;
     }

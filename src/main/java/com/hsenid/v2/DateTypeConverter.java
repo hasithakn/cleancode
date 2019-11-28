@@ -23,7 +23,7 @@ public class DateTypeConverter {
     }
 
 
-    public static String dateToISOWithOutUTC(Date date) {
+    public static String dateToISOWithoutUTC(Date date) {
         try {
             String pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'";
             SimpleDateFormat sdf = new SimpleDateFormat(pattern);
