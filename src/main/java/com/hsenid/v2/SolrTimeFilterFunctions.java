@@ -12,5 +12,61 @@ public class SolrTimeFilterFunctions {
     }
 }
 
+
+
+
 // datetime: [ '2019-11-28 00:00:00 -24HOURS' TO '2019-11-28 00:00:00 +24HOURS' ]
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//class TimeFilter {
+//    private String startFilter;
+//    private String endFilter;
+//
+//    public TimeFilter(String startFilter, String endFilter) {
+//        this.startFilter = startFilter;
+//        this.endFilter = endFilter;
+//    }
+//
+//    public String getStartFilter() {
+//        return startFilter;
+//    }
+//
+//    public String getEndFilter() {
+//        return endFilter;
+//    }
+//
+//}
